@@ -1,0 +1,5 @@
+dist
+config/env/production.json
+node_modules
+npm-debug.log
+.DS_Store
