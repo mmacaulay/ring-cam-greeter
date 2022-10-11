@@ -1,8 +1,25 @@
-import {config} from 'node-config-ts'
+import { PushNotificationAction } from 'ring-client-api'
+import { getCamera } from './ring-cam.js'
+import { whoGoesThere } from './play-sound.js'
 
-function greet(person: string) {
-    console.log(`Hello ${person}!`)
-    console.log('config is', config)
-}
+const camera = await getCamera()
+if (camera === undefined) throw new Error('Camera undefined')
+console.log(`id: ${camera.id} name: ${camera.name}`)
 
-greet('Matt')
+camera.onNewNotification.subscribe(notification => {
+    console.log(notification)
+    switch(notification.action) {
+        case PushNotificationAction.Motion:
+            console.log('Motion detected')
+            if (notification.subtype === 'human') {
+                whoGoesThere()
+            }
+            break
+        case PushNotificationAction.Ding:
+            console.log('Ding occurred')
+            break
+        default:
+            console.log(`Unknown action: ${notification.action}`)
+            break
+    }
+})

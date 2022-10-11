@@ -1,5 +1,8 @@
 {
   "ring": {
-    "refreshToken": ""
+    "refreshToken": "",
+    "locationIds": [],
+    "cameraId": -1,
+    "cameraStatusPollingSeconds": 20
   }
 }

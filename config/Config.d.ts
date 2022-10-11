@@ -6,6 +6,9 @@ declare module "node-config-ts" {
   }
   interface Ring {
     refreshToken: string
+    locationIds: Array<string>
+    cameraId: number
+    cameraStatusPollingSeconds: number
   }
   export const config: Config
   export type Config = IConfig
