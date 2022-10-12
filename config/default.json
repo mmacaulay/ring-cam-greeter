@@ -7,7 +7,10 @@
     "debug": true
   },
   "sound": {
+    "mode": "voice",
     "voice": "Bahh",
-    "message": "Who goes there?"
+    "message": "Who goes there?",
+    "recordingsDir": "sounds",
+    "recordingFile": "test.m4a"
   }
 }

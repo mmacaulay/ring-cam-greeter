@@ -13,8 +13,15 @@ declare module "node-config-ts" {
     debug: boolean
   }
   interface Sound {
+    mode: SoundType
     voice: string
     message: string
+    recordingsDir: string
+    recordingFile: string
+  }
+  enum SoundType {
+    voice = "voice",
+    recording = "recording"
   }
   export const config: Config
   export type Config = IConfig
