@@ -4,5 +4,9 @@
     "locationIds": [],
     "cameraId": -1,
     "cameraStatusPollingSeconds": 20
+  },
+  "sound": {
+    "voice": "Bahh",
+    "message": "Who goes there?"
   }
 }

@@ -1,10 +1,10 @@
 import { PushNotificationAction } from 'ring-client-api'
 import { getCamera } from './ring-cam.js'
-import { whoGoesThere } from './play-sound.js'
+import { playSound } from './play-sound.js'
 
 const camera = await getCamera()
 if (camera === undefined) throw new Error('Camera undefined')
-console.log(`id: ${camera.id} name: ${camera.name}`)
+console.log(`Using camera id: ${camera.id} name: ${camera.name}`)
 
 camera.onNewNotification.subscribe(notification => {
     console.log(notification)
@@ -12,7 +12,7 @@ camera.onNewNotification.subscribe(notification => {
         case PushNotificationAction.Motion:
             console.log('Motion detected')
             if (notification.subtype === 'human') {
-                whoGoesThere()
+                playSound()
             }
             break
         case PushNotificationAction.Ding:
