@@ -10,6 +10,7 @@ declare module "node-config-ts" {
     locationIds: Array<string>
     cameraId: number
     cameraStatusPollingSeconds: number
+    debug: boolean
   }
   interface Sound {
     voice: string

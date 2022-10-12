@@ -3,7 +3,8 @@
     "refreshToken": "",
     "locationIds": [],
     "cameraId": -1,
-    "cameraStatusPollingSeconds": 20
+    "cameraStatusPollingSeconds": 3,
+    "debug": true
   },
   "sound": {
     "voice": "Bahh",
