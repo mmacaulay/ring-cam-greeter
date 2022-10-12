@@ -5,23 +5,19 @@ declare module "node-config-ts" {
     ring: Ring
     sound: Sound
   }
-  interface Ring {
-    refreshToken: string
-    locationIds: Array<string>
-    cameraId: number
-    cameraStatusPollingSeconds: number
-    debug: boolean
-  }
   interface Sound {
-    mode: SoundType
+    mode: string
     voice: string
     message: string
     recordingsDir: string
     recordingFile: string
   }
-  enum SoundType {
-    voice = "voice",
-    recording = "recording"
+  interface Ring {
+    refreshToken: string
+    locationIds: any[]
+    cameraId: number
+    cameraStatusPollingSeconds: number
+    debug: boolean
   }
   export const config: Config
   export type Config = IConfig

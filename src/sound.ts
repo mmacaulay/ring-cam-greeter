@@ -2,7 +2,7 @@ import { exec } from 'child_process'
 import { config } from 'node-config-ts'
 import { RingCamera } from 'ring-client-api'
 import * as path from 'path'
-import { log } from './log'
+import { log } from './log.js'
 
 export const playVoice = () => {
   const voice = config.sound.voice
