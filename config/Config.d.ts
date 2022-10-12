@@ -11,6 +11,7 @@ declare module "node-config-ts" {
     message: string
     recordingsDir: string
     recordingFile: string
+    recordingMaxDuration: number
   }
   interface Ring {
     refreshToken: string

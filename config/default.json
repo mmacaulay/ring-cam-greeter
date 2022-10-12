@@ -11,6 +11,7 @@
     "voice": "Bahh",
     "message": "Who goes there?",
     "recordingsDir": "sounds",
-    "recordingFile": "test.m4a"
+    "recordingFile": "test.m4a",
+    "recordingMaxDuration": 10000
   }
 }

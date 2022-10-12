@@ -27,5 +27,5 @@ export const playRecording = async (camera: RingCamera) => {
 
   setTimeout(() => {
     call.stop()
-  }, 10000)
+  }, config.sound.recordingMaxDuration)
 }
